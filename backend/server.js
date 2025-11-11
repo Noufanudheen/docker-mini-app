@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 
 // Note: 'mongo' is the service name from docker-compose
-mongoose.connect('mongodb+srv://noufan:newpassword@project.hc2be.mongodb.net/?appName=Project', {
+mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
